@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Enter Any one operator</h1>
+    <ol>
+        <h2>
+            <li>push</li>
+            <li>pop</li>
+            <li>shift</li>
+            <li>unshift</li>
+            <li>splice</li>
+            <li>sort</li>
+            <li>length</li>
+        </h2>
+    </ol>
+    <input type="number" placeholder="Enter Choice" id="choice">
+    <input type="button" onclick="perform()" value="submit">
+    <p id="print"></p>
+    <p id="len"></p>
+    <script>
+        var a = [];
+
+        function perform() {
+            var choice = document.getElementById('choice').value;
+            switch (choice) {
+                case '1':
+                    a.push(prompt("Enter element:"));
+                    break;
+                case '2':
+                    a.pop();
+                    break;
+                case '3':
+                    a.shift();
+                    break;
+                case '4':
+                    a.unshift();
+                    break;
+                case '5':
+                    a.splice(prompt('Enter starting index-'), prompt('Enter ending index-'));
+                    break;
+                case '6':
+                    a.sort(function (a, b) { return a - b });
+                    break;
+                case '7':
+                    var len = a.length;
+                    document.getElementById('len').innerHTML = len;
+                    break;
+                default:
+                    alert('Please enter valid choice!!')
+            }
+            document.getElementById('print').innerHTML = a;
+        }
+    </script>
+</body>
+
+</html>

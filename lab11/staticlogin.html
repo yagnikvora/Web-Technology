@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    <div class="container bg-secondary-subtle w-25 mt-5">
+        <div class="text-center">
+            <form class="form text-center">
+                <img class="mt-5" src="logo.png" width="120px">
+                <p class="fs-1">
+                    Please sign in
+                </p>
+                <div class="container pb-1">
+                    <input type="email" class="form-control" id="email" placeholder="Email Address">
+                    <input type="password" class="form-control mt-1 mb-2" id="password" placeholder="Password">
+                    <input type="submit" onclick="check()" class="btn btn-primary w-100 my-3">
+                    <p class="mt-5 text-secondary fs-5">&copy; 2017-2018</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function check(){
+            email = document.getElementById('email').value; 
+            pass = document.getElementById('password').value;
+            if(email === "abc123@gmail.com" && pass === "abc@123")
+                document.write("Login successfull...")
+            // alert("Login successfully.....")
+            else    
+                document.write("Login uansuccessfull");
+                // alert("Please enter valid Username and Password")
+        }
+    </script>
+</body>
+</html>

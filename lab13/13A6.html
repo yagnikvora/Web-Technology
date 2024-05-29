@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("Array Destructuring...");
+        var a = [10, 20, 30, 40, 50];
+        var [first, second, third, ...rest] = a;
+        console.log(first);
+        console.log(second);
+        console.log(third);
+        console.log(rest);
+
+        console.log("Object Destructuring...");
+        var myself = {
+            name: "yagnik",
+            surname: "vora",
+            age: 19
+        }
+        var {name, surname, age} = myself;
+        console.log(name);
+        console.log(surname);
+        console.log(age);
+    </script>
+</body>
+
+</html>

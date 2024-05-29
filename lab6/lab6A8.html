@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animation {
+            width: 200px;
+            height: 200px;
+            animation: myanimation;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            background-color: red;
+            position: absolute;
+            /* animation-iteration-count: 2; */
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            left: 0px;
+            top: 0px;
+            animation-timing-function:ease-in;
+        }
+
+        @keyframes myanimation {
+            25% {
+                background-color: red;
+                left: 300px;
+                top: 0px;
+            }
+
+            50% {
+                left: 300px;
+                top: 300px;
+
+            }
+
+            75% {
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                background-color: yellow;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation">
+
+    </div>
+</body>
+
+</html>

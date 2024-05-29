@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body {
+            background-image: url('bg5.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        table {
+            border: 2px;
+            border-radius: 12px;
+            margin-left: 30px;
+        }
+
+        form {
+            color: rgb(0, 115, 255);
+            font-weight: 100;
+        }
+        input,textarea,select{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .lable{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+        }legend{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 30px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <marquee scrollamount=80 behavior="slide" >
+            <legend>Registration form</legend>
+            
+            <table>
+                <tr>
+                    <td class="lable">First Name</td>
+                    <td>:- </td>
+                    <td><input type="text" name="FN"></td>
+                </tr>
+                <tr>
+                    <td class="lable">Last Name</td>
+                    <td>:- </td>
+                    <td><input type="text" name="LN"></td>
+                </tr>
+                <tr>
+                    <td class="lable">E-mail</td>
+                    <td>:- </td>
+                    <td><input type="text" pattern="@{0}" name="EMAIL"></td>
+                </tr>
+                <tr>
+                    <td class="lable">Mobile no</td>
+                    <td>:- </td>
+                    <td><input type="number" name="MN"></td>
+                </tr>
+                <tr>
+                    <td class="lable">Date Of Birth</td>
+                    <td>:- </td>
+                    <td><input type="date" name="DB"></td>
+                </tr>
+                <tr>
+                    <td class="lable">Gender</td>
+                    <td>:- </td>
+                    <td class="lable"><input type="radio" name="LN" value="Male">Male
+                        <input type="radio" name="LN" value="Female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lable">Language</td>
+                    <td>:- </td>
+                    <td class="lable"><input type="checkbox" name="LN" value="Gujarati">Gujarati
+                        <input type="checkbox" name="LN" value="English">English
+                        <input type="checkbox" name="LN" value="Hindi">Hindi
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lable">Department</td>
+                    <td>:- </td>
+                    <td><select name="department">
+                            <option>Computer</option>
+                            <option>Civil</option>
+                            <option>Mechenical</option>
+                            <option>Electrical</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td class="lable">Address</td>
+                    <td>:- </td>
+                    <td>
+                        <textarea rows="5" cols="19"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center"><input class="btn btn-primary" type="submit"></td>
+                </tr>
+            </table>
+            </marquee>
+        </fieldset>
+    </form>
+</body>
+</html>

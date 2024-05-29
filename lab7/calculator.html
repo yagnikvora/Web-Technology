@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup Calculator</title>
+</head>
+<body>
+    <script>
+        function calculator() {
+            var a = parseFloat(prompt("Enter first number:"));
+            var op = prompt("Enter operator (+, -, *, /):");
+            var b = parseFloat(prompt("Enter second number:"));
+            var res;
+            switch (op) {
+                case '+':
+                    res = a + b;
+                    break;
+                case '-':
+                    res = a - b;
+                    break;
+                case '*':
+                    res = a * b;
+                    break;
+                case '/':
+                    if (b != 0)
+                        res = a / b;
+                    else {
+                        alert("Division by zero is not performed.........");
+                        return;
+                    }
+                    break;
+                default:
+                    alert("Invalid operator");
+                    return;
+            }
+            alert("Result: " + res);
+        }
+    </script>
+    <h1>Calculator</h1>
+    <button onclick="calculator()">Calculate</button>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number">
+    <input type="button" value="find" onclick="find()"></button>
+    <h1><p id="print"></p></h1>
+    <script>
+        function find(){
+            var a = document.getElementById('number').value;
+            for(i=1;i<=a;i++){
+                if(a%i == 0)
+                    document.getElementById('print').innerHTML = document.getElementById('print').innerHTML + i + ", ";
+            }
+        }
+    </script>
+</body>
+</html>

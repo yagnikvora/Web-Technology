@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="number" placeholder="Enter number for check">
+    <button onclick="palindrome()">Check</button>
+    <script>
+        function palindrome() {
+            var num = document.getElementById('number').value;
+            var numstring = num.toString();
+            var revnumstring = numstring.split('').reverse().join('');
+            if (numstring == revnumstring) {
+                alert("Number " + num + " is palindrome");
+            } else {
+                alert("Number " + num + " is not palindrome");
+            }
+        }
+    </script>
+</body>
+
+</html>

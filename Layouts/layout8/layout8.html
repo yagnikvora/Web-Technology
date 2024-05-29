@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .menu {
+            word-spacing: 20px;
+            background-color: rgb(220, 210, 210);
+            padding: 15px;
+        }
+
+        .menu,
+        a {
+            color: red;
+        }
+
+        .topmenu {
+            text-align: right;
+            font-size: small;
+        }
+
+        sub {
+            color: red;
+
+        }
+
+        .title {
+            background-color: rgb(220, 210, 210);
+            margin-top: -20px;
+            padding-left: 30px;
+            line-height: 20px;
+            padding-bottom: 80px;
+        }
+
+        .title h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            margin-bottom: 0px;
+            padding-top: 10px;
+        }
+
+        .content h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+        }
+
+        .content {
+            padding-left: 15px;
+        }
+
+        .content h2 {
+            font-size: smaller;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: -19px;
+        }
+
+        .content p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .r1col1 {
+            float: left;
+            width: 32%;
+            background-color: rgb(220, 210, 210);
+            margin-right: 20px;
+            padding-left: 12px;
+
+        }
+
+        .r1col2 {
+            float: left;
+            width: 32%;
+            background-color: rgb(220, 210, 210);
+            margin-right: 20px;
+            line-height: 25px;
+            padding-left: 12px;
+        }
+
+        .r1col3 {
+            float: left;
+            width: 32%;
+            background-color: rgb(220, 210, 210);
+            line-height: 25px;
+            padding-left: 12px;
+
+
+        }
+
+        .row1 {
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+
+        }
+
+        .inrow1 h1 {
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 15px;
+        }
+
+        .inr1col1 {
+            font-size: medium;
+            margin-top: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+        }
+
+        .r2col1,
+        .r2col2,
+        .r2col3,
+        .r2col4 {
+            float: left;
+            width: 24%;
+            background-color: rgb(220, 210, 210);
+            margin-right: 10px;
+            padding-left: 15px;
+            padding-bottom: 10px;
+
+        }
+
+        .r2col1 a,
+        .r2col2 a,
+        .r2col3 a,
+        .r2col4 a {
+            padding-left: 20px;
+
+        }
+
+        .row2 {
+            overflow: hidden;
+
+        }
+
+        .inrow2 {
+            padding-left: 10px;
+            overflow: hidden;
+
+        }
+
+        .inrow2 h1 {
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 15px;
+        }
+
+        .r1col2,
+        .r1col3 {
+            padding-bottom: 10px;
+        }
+
+        .last {
+            padding-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topmenu">
+            <a href="#">LINK</a><sub>>></sub>
+            <a href="#">SETTING</a><sub>>></sub>
+            <a href="#">SONTACT</a><sub>>></sub>
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Gallary</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="title">
+            <h1>site title</h1>
+            fixed 3-column over 4-column layout
+        </div>
+        <div class="content">
+            <h1>centerColumn</h1>
+            <h2>sub hadding</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut hic explicabo enim modi doloribus, excepturi
+                illo beatae accusantium dignissimos laudantium cum, error assumenda aut inventore. Ut fugiat soluta
+                assumenda dolor magnam quo est quam ad dolorum libero fuga natus sed qui a ex at nemo ea rerum quas
+                facere, deleniti quasi! Similique aut numquam corporis debitis iure maiores, esse quis!</p>
+        </div>
+        <hr>
+        <div class="row1">
+            <div class="inrow1">
+                <div class="r1col1">
+                    <h1>coll_1</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, magnam?Lorem ipsum dolor sit
+                        amet.<br>
+                    <div class="inr1col1">
+                        <a href="#">Link</a><br>
+                        date<br>
+                        Lorem ipsum dolor sit amet.<br><br>
+                        <a href="#">Link</a><br>
+                        date<br>
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+                <div class="r1col2">
+                    <h1>coll_2</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, labore?Lorem ipsum
+                        dolorsitamet Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, labore?Lorem ipsum dolor
+                        sitamet Lorem, ipsumdolor sit amet consectetur adipisicing.</p>
+
+                </div>
+                <div class="r1col3">
+                    <h1>coll_3</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, labore?Lorem ipsum
+                        dolorsitamet Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, labore?Lorem ipsum dolor
+                        sitamet Lorem, ipsumdolor sit amet consectetur adipisicing.</p>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row2">
+            <div class="inrow2">
+                <div class="r2col1">
+                    <h1>box_1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod totam inventore repellendus, ex
+                        molestias eaque dicta dolore facere! A, similique.</p>
+                    <a href="#">LINK...</a>
+                </div>
+                <div class="r2col2">
+                    <h1>box_1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod totam inventore repellendus, ex
+                        molestias eaque dicta
+                        dolore facere! A, similique.</p>
+                    <a href="#">LINK...</a>
+                </div>
+                <div class="r2col3">
+                    <h1>box_1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod totam inventore repellendus, ex
+                        molestias eaque dicta
+                        dolore facere! A, similique.</p>
+                    <a href="#">LINK...</a>
+                </div>
+                <div class="r2col4">
+                    <h1>box_1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod totam inventore repellendus, ex
+                        molestias eaque dicta
+                        dolore facere! A, similique.</p>
+                    <a href="#">LINK...</a>
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            <p>Copyright. @2005-2008 <a href="#">Compony Name</a> | <a href="#">The CSS Tinderbox</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

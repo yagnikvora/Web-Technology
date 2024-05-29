@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <input type="button" onclick="getfaculty()" value="GET">
+    <script>
+        function getfaculty() {
+            var size = prompt("Enter No of Faculties:");
+            var facultie = [];
+            for (i = 0; i < size; i++) {
+                var value = prompt("Enter faculty-" + (i + 1))
+                facultie.push(value)
+            }
+            document.write('<h1>')
+            document.write(facultie.join("<br>"));
+            document.write('</h1>')
+
+        }
+    </script>
+</body>
+
+</html>

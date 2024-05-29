@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number" placeholder="Enter number">
+    <input type="button" value="find" onclick="find()">
+    <h1><p id="print"></p></h1>
+    <script>
+        function find(){
+            var num = document.getElementById('number').value;
+
+            var numarray = num.split('');
+            var first_digit = numarray[0];
+            var second_digit = numarray[1];
+            var ans = 1;
+
+            for(i = 1; i<=second_digit; i++){
+                ans *= first_digit;
+            }
+            document.getElementById('print').innerHTML = ans;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        .main {
+            border: 2px solid gray;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+        }
+
+        .header {
+            background-color: rgb(91, 150, 244);
+            padding: 30px;
+            padding-left: 30px;
+        }
+
+        .footer {
+            background-color: rgb(50, 114, 216);
+            padding: 30px;
+            padding-left: 30px;
+
+        }
+        .center{
+            padding-left: 300px;
+        }
+        .mid {
+            float: left;
+            padding: 3px;
+        }
+
+        .main-content {
+            background-color: rgb(64, 197, 64);
+            float: left;
+            width: 58%;
+            padding: 108px 140px;
+            margin-right: 5px;
+
+        }
+
+        .row1 {
+            padding: 3px;
+        }
+
+        .sidebar {
+            background-color: rgb(227, 97, 227);
+            margin-left: 5px;
+            padding: 108px 130px 108px 100px;
+            width: 41%;
+        }
+
+        .twin1,
+        .twin2 {
+            background-color: orange;
+            float: left;
+            /* width: 49%; */
+            padding:68px 200px 68px 170px;
+        }
+
+        .row2 {
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
+        .twin1 {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>.header</h1>
+        </div>
+        <div class="center">
+            <div class="mid">
+                <div class="row1">
+                    <div class="main-content">
+                        <h1>.main-content</h1>
+                    </div>
+                    <div class="sidebar">
+                        <h1>.sidebar</h1>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="twin1">
+                        <h1>.twin</h1>
+                    </div>
+                    <div class="twin2">
+                        <h1>.twin</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h1>.footer</h1>
+        </div>
+    </div>
+</body>
+
+</html>

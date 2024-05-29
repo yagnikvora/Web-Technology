@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="number1" placeholder="start">
+    <input type="number" id="number2" placeholder="end">
+    <input type="button" value="find" onclick="find()"></button>
+    <h1>
+        <p id="print"></p>
+    </h1>
+    <script>
+        function find() {
+            var start_length = document.getElementById('number1').value;
+            var end_length = document.getElementById('number2').value;
+            for (i = start_length; i <= end_length; i++) {
+                if (isPrime(i) === true) {
+                    document.getElementById('print').innerHTML += i + ",";
+                }
+            }
+        }
+        function isPrime(n) {
+            if (n <= 1)
+                return false;
+            for (let i = 2; i <= n / 2; i++) {
+                if (n % i === 0)
+                    return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

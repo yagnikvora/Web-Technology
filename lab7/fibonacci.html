@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number" placeholder="Enter no. of steps">
+    <button onclick="fibo()">Generate</button>
+    <script>
+        function fibo(){
+            var n = document.getElementById('number').value;
+            var n1=0, n2=1, next;
+            document.write("<h1>"+n1+","+n2+",");
+            for(i = 1;i<n-1;i++){
+                next = n1+n2;
+                document.write(next+",");
+                n1 = n2;
+                n2 = next;
+            }
+            document.write("</h1>");
+        }
+    </script>
+</body>
+</html>

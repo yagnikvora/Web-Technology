@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Sum {
+            constructor(a, b) {
+                this.a = a;
+                this.b = b;
+            }
+
+            calculateSum() {
+                return this.a + this.b;
+            }
+        }
+        var sum1 = new Sum(5, 10);
+        var sum2 = new Sum(50, 100);
+        s1 = sum1.calculateSum();
+        s2 = sum2.calculateSum();
+        console.log("Sum(5,10)", s1);
+        console.log("Sum(50,100)", s2);
+
+
+
+        // class Sum {
+        //     constructor(a, b) {
+        //         this.a = a;
+        //         this.b = b;
+        //     }
+        //     addition() {
+        //         console.log(a+b);
+        //     }
+        // }
+
+        // var sum1 = new Sum(10, 20);
+        // var sum2 = new Sum(100, 200);
+
+        // sum1.addition();
+        // sum2.addition();
+    </script>
+</body>
+
+</html>

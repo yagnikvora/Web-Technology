@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function quickSort(arr, start = 0, end = arr.length - 1) {
+            if (start < end) {
+                let index = partiton(arr, start, end);
+                quickSort(arr, start, index - 1);
+                quickSort(arr, index + 1, end);
+            }
+        }
+        function partiton(arr, start, end) {
+            let pivot = start;
+            while (start < end) {
+                while (arr[start] <= arr[pivot] && start < arr.length)
+                    start++;
+                while (arr[end] > arr[pivot] && end > 0)
+                    end--;
+                if (start < end)
+                    swap(arr, start, end);
+            }
+            swap(arr, pivot, end);
+            return end;
+        }
+        function swap(arr, i, j) {
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        // var arrayToSort = new Array(9);
+        var arrayToSort = [8, 3, 0, 5, 5, 9, 4, 6, 2, 7];
+        document.write('<h1>Original Array:', arrayToSort, '</h1>');
+
+        quickSort(arrayToSort);
+        document.write('<h1>Sorted Array:', arrayToSort, '<h1>');
+
+    </script>
+</body>
+
+</html>

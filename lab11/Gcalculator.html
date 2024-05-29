@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+
+        .calc {
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 25px;
+        }
+
+        .calc form input {
+           
+            border: 0;
+            outline: 0;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-color: rgb(51, 51, 51);
+            font-size: 25px;
+            color: whitesmoke;
+            margin: 4px;
+        }
+
+        form .display {
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0px;
+
+        }
+
+        form .display input {
+            text-align: right;
+            font-size: 50px;
+            flex: 1;
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            box-shadow: none;
+            margin-top: 50px;
+        }
+
+        form input.zero {
+            width: 162px;
+            border-radius: 35px;
+            text-align: left;
+            padding-left: 25px;
+        }
+
+        form input.orange {
+            background-color: rgb(255, 159, 10);
+            font-size: 30px;
+        }
+
+        form input.gray {
+            background-color: rgb(165, 165, 165);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calc">
+            <form>
+                <div class="display">
+                    <input type="taxt" maxlength="10" readonly id="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="clearall()" class="gray">
+                    <input type="button" value="C" onclick="clearone()" class="gray">
+                    <input type="button" value="%" onclick="writedisplay('%')" class="gray">
+                    <input type="button" value="&divide;" class="orange" onclick="writedisplay('/')">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="writedisplay('7')">
+                    <input type="button" value="8" onclick="writedisplay('8')">
+                    <input type="button" value="9" onclick="writedisplay('9')">
+                    <input type="button" value="x" class="orange" onclick="writedisplay('*')">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="writedisplay('4')">
+                    <input type="button" value="5" onclick="writedisplay('5')">
+                    <input type="button" value="6" onclick="writedisplay('6')">
+                    <input type="button" value="-" class="orange" onclick="writedisplay('-')">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="writedisplay('1')">
+                    <input type="button" value="2" onclick="writedisplay('2')">
+                    <input type="button" value="3" onclick="writedisplay('3')">
+                    <input type="button" value="+" class="orange" onclick="writedisplay('+')">
+                </div>
+                <div>
+                    <input type="button" value="0" class="zero" onclick="writedisplay('0')">
+                    <input type="button" value="." onclick="writedisplay('.')">
+                    <input type="button" value="=" class="orange" onclick="calculate()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function clearall() {
+            document.getElementById('display').value = '';
+        }
+        function clearone() {
+            display = document.getElementById('display').value;
+            document.getElementById('display').value = display.substring(0, display.length - 1);
+        }
+        function writedisplay(val) {
+            document.getElementById('display').value += val;
+        }
+        function calculate() {
+            display = document.getElementById('display').value;
+            document.getElementById('display').value = eval(display);
+        }
+    </script>
+</body>
+
+</html>

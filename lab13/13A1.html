@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function abc1(val,callback){
+            console.log(" i am "+val);
+            setTimeout(() => {
+                callback(val*val);
+            },2000);
+        }
+        function cFunction(result){
+            console.log("square with callback is "+result);
+        }
+        abc1(10,cFunction);
+        console.log("after calling it will wait 2 seconds")
+    </script>
+</body>
+</html>

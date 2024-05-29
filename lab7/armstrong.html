@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number" placeholder="Enter number for check">
+    <button onclick="armstrong()">Check</button>
+    <script>
+        function armstrong(){
+            var num = document.getElementById('number').value;
+            var len = num.length;
+            var sum = 0;
+            for(i = 0;i<len;i++){
+                sum += Math.pow(num[i],len);
+            }
+            if(sum == num){
+                alert("Number "+num+" is armstrong");
+            }else{
+                alert("Number "+num+" is not armstrong");
+            }
+        }
+    </script>
+</body>
+</html>

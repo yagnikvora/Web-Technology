@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" class="cb" value="608">608<br>
+    <input type="checkbox" class="cb" value="609">609<br>
+    <input type="checkbox" class="cb" value="610">610<br>
+    <input type="checkbox" class="cb" value="611">611<br>
+    <input type="checkbox" class="cb" value="612">612<br>
+    <input type="checkbox" class="cb" value="613">613<br>
+    <input type="checkbox" class="cb" value="614">614<br>
+    <input type="checkbox" class="cb" value="615">615<br>
+    <button onclick="find()">check</button>
+    <p id="print"></p>
+    <script>
+        const cbs = document.querySelectorAll('.cb');
+        function find(){
+            var count = [];
+
+            cbs.forEach(checkb => {
+                if(checkb.checked){
+                    count.push(checkb.value)
+                }
+            })
+            document.getElementById('print').innerHTML = count.join(',')
+        }
+    </script>
+
+</body>
+</html>

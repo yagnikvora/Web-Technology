@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 onmouseenter="mEnter()" onmouseleave="mLeave()" id="mytext">My name is yagnik</h1>
+
+    <Button onclick="printDate()">Check date</Button><br><br>
+    <Button onclick="red()">Red</Button>
+    <Button onclick="green()">Green</Button>
+
+    <p id="print"></p>
+    <script>
+        function mEnter() {
+            document.getElementById('mytext').style.color = "yellow";
+        }
+        function mLeave() {
+            document.getElementById('mytext').style.color = "black";
+        }
+        function red() {
+            document.body.style.backgroundColor = "red";
+        }
+        function green() {
+            document.body.style.backgroundColor = "green";
+        }
+        function printDate(){
+            var date = new Date().toString();
+            document.getElementById('print').innerHTML = date;
+        }
+    </script>
+</body>
+
+</html>

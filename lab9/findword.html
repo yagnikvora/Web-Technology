@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="sentence" placeholder="Enter Sentence">
+    <input type="text" id="word" placeholder="Enter Word To Find">
+    <input type="button" onclick="find()" value="find">
+    <p id="print"></p>
+    <script>
+        function findword(sentence, word) {
+            var Word_Array = sentence.toString().split(" ");
+
+            for (i = 0; i < Word_Array.length; i++) {
+                if (Word_Array[i] === word)
+                    return i;
+            }
+            return -1;
+        }
+        function find() {
+            var sentence = document.getElementById('sentence').value.toLowerCase();
+            var search = document.getElementById('word').value.toLowerCase();
+
+            var index = findword(sentence, search);
+
+            if (index !== -1)
+                document.getElementById('print').innerHTML = 'Word is found at ' + (index + 1);
+            else
+                document.getElementById('print').innerHTML = 'Word is not found';
+
+
+        }
+    </script>
+</body>
+
+</html>

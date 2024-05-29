@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onkeypress="keyPress(event)" onkeyup="keyUp()">
+    <h1 id="print"></h1>
+    <h2 id="printV"></h2>
+    <script>
+        function keyPress(e) {
+            document.getElementById('printV').innerHTML = "";
+            if (e.key === "a" || e.key === "e" || e.key === "i" || e.key === "o" || e.key === "u") {
+                document.getElementById('printV').innerHTML = "It is Vowel...";
+            }
+            document.getElementById('print').innerHTML = e.key + "<br>" + e.keyCode;
+        }
+        function keyUp() {
+            document.body.style.backgroundColor = "rgb(" + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + ")";
+        }
+    </script>
+</body>
+
+</html>

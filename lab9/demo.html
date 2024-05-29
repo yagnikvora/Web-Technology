@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function quickSort(arr, start = 0, end = arr.length - 1) {
+            if (start < end) {
+                let index = partition(arr, start, end);
+                quickSort(arr, start, index - 1);
+                quickSort(arr, index + 1, end);
+            }
+        }
+
+        function partition(arr, start, end) {
+            // let pivot = a[start];
+            // while (start < end) {
+            //     while (a[start] < pivot) {
+            //         start++;
+            //     }
+            //     while (a[end] >= pivot) {
+            //         end--;
+            //     }
+
+            //     if (start < end) {
+            //         let temp = a[start];
+            //         a[start] = a[end];
+            //         a[end] = temp;
+            //     }
+            // }
+            // temp = a[end];
+            // a[end] = a[start];
+            // a[start] = temp;
+
+            // return end;
+
+            let pivot = arr[end];
+            let pivotIndex = start;
+
+            for (let i = start; i < end; i++) {
+                if (arr[i] < pivot) {
+                    swap(arr, i, pivotIndex);
+                    pivotIndex++;
+                }
+            }
+
+            swap(arr, pivotIndex, end);
+            return pivotIndex;
+        }
+
+        function swap(arr, i, j) {
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        const arrayToSort = [8, 3, 1, 5, 9, 4, 6, 2, 7];
+        document.write('Original Array:', arrayToSort);
+
+        quickSort(arrayToSort);
+        document.write('<br><hr>Sorted Array:', arrayToSort);
+
+    </script>
+</body>
+
+</html>

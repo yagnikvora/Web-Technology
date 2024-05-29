@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="Enter string">
+    <input type="button" value="check" onclick="find()">
+    <h1><p id="print"></p></h1>
+    <script>
+        function find(){
+            var str = document.getElementById('input').value;
+
+            var f_index = str.indexOf('a');
+            var l_index = str.lastIndexOf('a');
+
+            if(f_index === -1 || l_index === -1){
+                document.getElementById('print').innerHTML = 'In string a is not present';
+                return;
+            }
+
+            var sub_str = str.substring(f_index+1,l_index)
+
+            document.getElementById('print').innerHTML = 'First occurrence is '+(f_index+1)+' and last occurrence is '+(l_index+1)+' substring is '+sub_str;
+        }
+    </script>
+</body>
+</html>
